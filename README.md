@@ -45,5 +45,15 @@ python manage.py migrate
 # Run the server
 python manage.py runserver
 ```
+## API Endpoint:
+* When you run the server in dafault port, you will access the application via ``` http://127.0.0.1:8000/ ```
+* To upload the files and perfomr reconciliation, the url is POST ``` /api/reconcile/ ```
+* To view all the reconciliation reports: GET ```/api/reports ```
+* To view the reports (json), use: GET  ```/api/reports/1 ``` 
+* Note that you are passing the report id which you can get through the successful reconciliation response or through the view all reports endpoint.
+* For CSV and HTML, you need to pass the format type parameter after the report id :GET ```http://127.0.0.1:8000/api/reports/1?type=html```
+* To test via the browser, simply add ```/api/schema/swagger-ui/# ``` after you server port, ie ```http://127.0.0.1:8000/api/schema/swagger-ui/#/```
+* To run unit test, use ``` python manage.py test reconapp```
+
 
 
