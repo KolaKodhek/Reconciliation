@@ -17,5 +17,7 @@ Reconciliation API with DRF
 4. Once reconciliation is done, a report is generated, the user can then download the files in both CSV, HTML and JSON formats.
 
 ## Sample Files
-![Source file](https://github.com/KolaKodhek/Reconciliation/blob/main/sourcefile.csv)
-![Target file](https://github.com/KolaKodhek/Reconciliation/blob/main/targetfile.csv)
+ * ![Source file](https://github.com/KolaKodhek/Reconciliation/blob/main/sourcefile.csv)
+ * ![Target file](https://github.com/KolaKodhek/Reconciliation/blob/main/targetfile.csv)
+ * The Reqired columns are Txn Refno, Debit and Credit
+   * ![image](https://github.com/user-attachments/assets/2d3a0516-1db3-4991-8f24-e8ac4387df7b)
