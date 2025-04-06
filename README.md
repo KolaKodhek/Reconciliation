@@ -17,3 +17,5 @@ Reconciliation API with DRF
 4. Once reconciliation is done, a report is generated, the user can then download the files in both CSV, HTML and JSON formats.
 
 ## Sample Files
+![Source file](https://github.com/KolaKodhek/Reconciliation/blob/main/sourcefile.csv)
+![Target file](https://github.com/KolaKodhek/Reconciliation/blob/main/targetfile.csv)
