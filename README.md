@@ -1,10 +1,10 @@
 # Reconciliation Application
 Reconciliation API with DRF 
-## Overview
+## Overview:
 * This is an API that takes two csv files, the source and target file.
 * It then perfoms a reconciliation to detect discripancies, the mimatching values in both files.
 * Once reconciliation is done, the user can the down the report in either csv, html or json file types.
-## Process Flow
+## Process Flow:
 1. The user uploads two csv file, source file and target file.
 2. The system performs validation:
    * File type validation.
@@ -16,8 +16,32 @@ Reconciliation API with DRF
    * The system identifies duplicated transactions among other discrepancies.
 4. Once reconciliation is done, a report is generated, the user can then download the files in both CSV, HTML and JSON formats.
 
-## Sample Files
+## Sample Files:
  * ![Source file](https://github.com/KolaKodhek/Reconciliation/blob/main/sourcefile.csv)
  * ![Target file](https://github.com/KolaKodhek/Reconciliation/blob/main/targetfile.csv)
  * The Reqired columns are Txn Refno, Debit and Credit
    * ![image](https://github.com/user-attachments/assets/2d3a0516-1db3-4991-8f24-e8ac4387df7b)
+## Installation Process:
+# Clone the repository
+git clone (https://github.com/KolaKodhek/Reconciliation.git)
+cd reconciliation
+
+# Set up virtual environment
+pipenv shell
+
+# Install dependencies
+python -m pip install Django
+pip install djangorestframework
+pip install markdown 
+pip install pandas
+pip install beautifulsoup4
+pip install drf-spectacular
+
+# Run migrations
+python manage.py makemigrations
+python manage.py migrate
+
+# Run the server
+python manage.py runserver
+
+
