@@ -22,6 +22,7 @@ Reconciliation API with DRF
  * The Reqired columns are Txn Refno, Debit and Credit
    * ![image](https://github.com/user-attachments/assets/2d3a0516-1db3-4991-8f24-e8ac4387df7b)
 ## Installation Process:
+```
 # Clone the repository
 git clone (https://github.com/KolaKodhek/Reconciliation.git)
 cd reconciliation
@@ -43,5 +44,6 @@ python manage.py migrate
 
 # Run the server
 python manage.py runserver
+```
 
 
