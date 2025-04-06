@@ -54,6 +54,9 @@ python manage.py runserver
 * For CSV and HTML, you need to pass the format type parameter after the report id :GET ```http://127.0.0.1:8000/api/reports/1?type=html```
 * To test via the browser, simply add ```/api/schema/swagger-ui/# ``` after you server port, ie ```http://127.0.0.1:8000/api/schema/swagger-ui/#/```
 * To run unit test, use ``` python manage.py test reconapp```
+## Limitations:
+* The system accepts only csv file types for source and target files
+* Txn Refno, Debit and Credit columns must be valid columns in the files uploaded
 
 
 
