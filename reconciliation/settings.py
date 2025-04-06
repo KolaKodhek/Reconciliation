@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,8 +37,29 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'reconapp',
+    'drf_spectacular',
 ]
-
+REST_FRAMEWORK = {
+    'UNICODE_JSON': False,
+    'STRICT_JSON': False,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': None,  # No pagination for this assessment
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'  # For simplicity in this assessment
+    ]
+    
+}
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Reconciliation API',  #  API's title
+    'DESCRIPTION': 'API for uploading and reconciling financial files.',  # API description
+    'VERSION': '1.0.0',  # API's version
+    'SERVE_INCLUDE_SCHEMA': False,  # Disable schema serving at root (optional)
+    
+}
+MEDIA_URL = '/recon_uploads/' #The path where the files will be uploaded
+MEDIA_ROOT = os.path.join(BASE_DIR, 'recon_uploads')
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
